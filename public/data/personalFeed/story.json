@@ -1,0 +1,16 @@
+{
+  "profile_story": [
+    {
+      "story_id": 7,
+      "title": "명언",
+      "thumbnail_path": "https://lh3.googleusercontent.com/proxy/4QruuGH9qIdd7RrUG7_7lIP5vpK2xqDMleDt23OnefgRf6v2V97gio9i-48pMMZSwDVsLRusPwy7MaDD9HQXVqme4uvVinbLmcjoIuGxKZWgoe4c2A",
+      "file_type": "image"
+    },
+    {
+      "story_id": 8,
+      "title": "사랑",
+      "thumbnail_path": "https://i.pinimg.com/originals/5d/99/89/5d9989c2ddc5aaa8a8627df55c998b62.jpg",
+      "file_type": "image"
+    }
+  ]
+}

@@ -45,7 +45,6 @@ function LoginForm(props) {
       loginObject.phone = id;
     }
 
-    console.log(loginObject);
     fetch(SIGNIN, {
       method: "POST",
       body: JSON.stringify(loginObject),

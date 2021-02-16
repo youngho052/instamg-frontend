@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import FeedStorySlider from "./Components/FeedStorySlider";
-import { JSERVER } from "../../Config";
+import { SERVER } from "../../Config";
 
 function Story() {
   const [feedImages, setFeedImages] = useState([]);
 
   useEffect(() => {
-    fetch(`${JSERVER}/story/profile/5`, {
+    fetch(`${SERVER}/story/profile/5`, {
       headers: {
         Authorization: localStorage.getItem("token"),
       },
@@ -19,7 +19,7 @@ function Story() {
   return (
     <Storys>
       <StoryContainer>
-        <FeedStorySlider feedImages={feedImages} SERVER={JSERVER} />
+        <FeedStorySlider feedImages={feedImages} SERVER={SERVER} />
       </StoryContainer>
     </Storys>
   );
