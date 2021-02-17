@@ -16,12 +16,13 @@ export default function Posts(props) {
   const [postPaging, setPostPaging] = useState();
   //
   const target = useRef();
+  const { tmpId } = props;
 
   // 인피니티 IntersectionObserver
   const fetchInstaPosts = async () => {
     await axios
       // .get("/data/personalFeed/post.json")
-      .get(`${FEED_THUMBNAILS}/${props.match.params.id}?page=${offset}`)
+      .get(`${FEED_THUMBNAILS}/${tmpId}?page=${offset}`)
       // .get(`${FEED_THUMBNAILS}/${5}?page=${offset}`)
       .then((response) => {
         if (response.data.post_list.length === 0) {

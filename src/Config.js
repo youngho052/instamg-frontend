@@ -7,14 +7,11 @@ export const STORY = `${SERVER}/story`;
 // like
 export const LIKE_COMMENT = `${SERVER}/post/comment/like`;
 export const LIKE_ARTICLE = `${SERVER}/post/like`;
-
 // comment
 export const COMMENT_POST = `${SERVER}/post/comment`;
 export const DELETE_COMMENT = `${SERVER}/post/comment/delete`;
-
 // followStatus
 export const FOLLOW = `${SERVER}/user`;
-
 // video
 export const VIDEO_VIEW = `${SERVER}/post/view`;
 
