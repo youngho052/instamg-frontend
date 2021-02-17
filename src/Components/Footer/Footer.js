@@ -19,7 +19,7 @@ function Footer() {
             <option>Chinese</option>
             <option>Spain</option>
           </select>
-          <Span>© 2021 Instagram from Facebook</Span>
+          <Span>© 2021 Instamg from Facegram</Span>
         </SelectLanguage>
       </FooterContainer>
     </Footers>

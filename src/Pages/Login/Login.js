@@ -1,7 +1,7 @@
 import React from "react";
 
-const Login = () => {
+function Login(props) {
   return <div></div>;
-};
+}
 
 export default Login;
