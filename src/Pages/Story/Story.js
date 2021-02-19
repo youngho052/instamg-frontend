@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import FeedStorySlider from "./Components/FeedStorySlider";
-import { FEED_STORY } from "../../Config";
+import SliderContainer from "./Components/SliderContainer";
+import { STORY } from "../../Config";
 
-function Story(props) {
-  const [feedImages, setFeedImages] = useState([]);
-  console.log(props.match.params.id);
+function Story() {
+  const [storyImages, setStoryImages] = useState([]);
+
   useEffect(() => {
-    fetch(`${FEED_STORY}/${props.match.params.id}`, {
+    fetch(`${STORY}`, {
       headers: {
         Authorization: localStorage.getItem("token"),
       },
     })
       .then((res) => res.json())
-      .then((result) => setFeedImages(result.profile_story));
+      .then((result) => setStoryImages(result.story_list));
   }, []);
 
   return (
     <Storys>
       <StoryContainer>
-        <FeedStorySlider feedImages={feedImages} />
+        <SliderContainer storyImages={storyImages} />
       </StoryContainer>
     </Storys>
   );
@@ -33,7 +33,7 @@ const Storys = styled.div`
   background-color: #1a1a1a;
 
   .swiper-slide {
-    margin-top: 50px;
+    margin-top: 20px;
     transform: scale(0.5);
   }
 
