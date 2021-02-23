@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import ProfileModify from "./ProfileModify";
 import ProfilePic from "../../../Components/ProfilePic/ProfilePic";
-import { SERVER } from "../../../Config";
+import { USER_PROFILE } from "../../../Config";
+import { useHistory } from "react-router";
 
-function ProfileInfo(props) {
+function ProfileInfo() {
   const [selectFile, setSelectFile] = useState();
   const [pickFile, setPickFile] = useState(false);
   const [userData, setUserData] = useState([]);
@@ -18,6 +19,7 @@ function ProfileInfo(props) {
     new_passwordCheck: "",
   });
 
+  const history = useHistory();
   // 이미지 업로드 핸들러
   const uploadFileHandle = (e) => {
     setSelectFile(e.target.files[0]);
@@ -33,6 +35,17 @@ function ProfileInfo(props) {
     });
   };
 
+  // 처음 받아오는 데이터
+  useEffect(() => {
+    fetch(`${USER_PROFILE}`, {
+      headers: {
+        Authorization: localStorage.getItem("token"),
+      },
+    })
+      .then((res) => res.json())
+      .then((result) => setUserData(result.profile));
+  }, []);
+
   //받아온 데이터들을 각각의 스테이트값에 업데이트
   useEffect(() => {
     setUserInfo({
@@ -42,17 +55,6 @@ function ProfileInfo(props) {
       profile_message: userData.profile_message,
     });
   }, [userData]);
-
-  // 처음 받아오는 데이터
-  useEffect(() => {
-    fetch(`${SERVER}/user/profile`, {
-      headers: {
-        Authorization: localStorage.getItem("token"),
-      },
-    })
-      .then((res) => res.json())
-      .then((result) => setUserData(result.profile));
-  }, []);
 
   //폼데이터 전송 핸들러
   const handleSubmit = (e) => {
@@ -80,36 +82,35 @@ function ProfileInfo(props) {
     formData.append("profile_photo", selectFile);
     formData.append("json", JSON.stringify(jsonData));
 
-    fetch(`${SERVER}/user/profile`, {
+    fetch(`${USER_PROFILE}`, {
       method: "POST",
       headers: {
-        // "Content-Type": "multopart/form-data",
         Authorization: localStorage.getItem("token"),
       },
       body: formData,
     })
       .then((res) => res.json())
       .then((result) => {
+        const errorMsg = {
+          ALREADY_IN_USE_ACCOUNT: "이미 사용중인 아이디 입니다.",
+          ALREADY_IN_USE_EMAIL: "이미 사용중인 이메일 입니다.",
+          INVALID_EMAIL: "잘못된 이메일 형식입니다.",
+          ALREADY_IN_USE_PHONE: "이미 사용중인 번호 입니다.",
+          INVALID_PASSWORD: "비밀번호 형식이 잘못 되었습니다.",
+          PASSWORD_MISMATCH: "기존 비밀번호를 잘못 입력 하셨습니다.",
+        };
+
         if (result.message === "CHANGE_COMPLETE") {
           alert("수정완료");
+          return;
+        }
+
+        if (result.message) {
+          return alert(errorMsg[result.message]);
         }
       });
   };
 
-  // const InputItem = (type, name, value, placeholder) => {
-  //   return (
-  //     <InputContainer>
-  //       <Span>{placeholder}</Span>
-  //       <InputForm
-  //         type={type}
-  //         name={name}
-  //         value={value}
-  //         onChange={onChange.bind()}
-  //         placeholder={placeholder}
-  //       />
-  //     </InputContainer>
-  //   );
-  // };
   const { profile_message } = userInfo;
 
   const imageStyle = {

@@ -5,7 +5,7 @@ import { FEED_STORY } from "../../Config";
 
 function Story(props) {
   const [feedImages, setFeedImages] = useState([]);
-  console.log(props.match.params.id);
+  console.log(props.match);
   useEffect(() => {
     fetch(`${FEED_STORY}/${props.match.params.id}`, {
       headers: {

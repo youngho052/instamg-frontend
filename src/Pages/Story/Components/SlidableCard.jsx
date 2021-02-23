@@ -36,7 +36,7 @@ function SlidableCard(props) {
     setIsVideo(storyItems[targetIdx].files[0].file_type === "video");
     setIndex(targetIdx);
   };
-  console.log(SERVER + "/" + currentItem?.files[0]?.path);
+
   return (
     <StorySliders>
       <UserInformCotainer>

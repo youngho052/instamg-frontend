@@ -52,14 +52,16 @@ function SignForm(props) {
           MINIMUM_PASSWORD_LENGTH_IS_8: "비밀번호는 8자 이상이여야 합니다.",
           EMAIL_ALREADY_EXIST: "사용중인 이메일입니다.",
           WRONG_EMAIL_FORMAT: "잘못된 이메일 형식입니다.",
-          SUCCESS: "회원가입 성공!",
         };
 
-        if (result.message) return alert(errorMsg[result.message]);
+        if (result.message === "SUCCESS") {
+          alert("회원가입 성공!");
+          history.push("/login");
+          return;
+        }
 
         if (result.message) {
-          alert(errorMsg[result.message]);
-          history.push("/login");
+          return alert(errorMsg[result.message]);
         }
       });
   };

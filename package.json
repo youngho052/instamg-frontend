@@ -23,12 +23,15 @@
     "react-slick": "^0.28.0",
     "react-slick-slider": "^0.15.10",
     "slick-carousel": "^1.8.1",
+    "socket.io": "^3.1.2",
+    "socket.io-client": "^3.1.2",
     "styled-components": "^5.2.1",
     "styled-dropdown-component": "^4.0.0",
     "styled-icons": "^10.29.0",
     "styled-reset": "^4.3.4",
     "swiper": "^6.5.0",
-    "web-vitals": "^1.1.0"
+    "web-vitals": "^1.1.0",
+    "webpack": "^4.44.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -57,6 +60,9 @@
   "devDependencies": {
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "webpack-cli": "^4.5.0"
   }
 }

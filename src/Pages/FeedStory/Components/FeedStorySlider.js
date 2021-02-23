@@ -114,14 +114,14 @@ const UserInfo = styled.div`
 
 const P = styled.p`
   margin-left: 5px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: bold;
   color: #fff;
 `;
 
 const Span = styled.span`
   margin-left: 10px;
-  font-size: 10px;
+  font-size: 12px;
   color: #fff;
   opacity: 0.7;
 `;

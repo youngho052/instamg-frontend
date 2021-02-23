@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import InputForm from "./Input/InputForm";
 import { INPUT_DATA } from "../Components/Data/InputData";
@@ -6,7 +6,9 @@ import { INPUT_DATA } from "../Components/Data/InputData";
 function ProfileModify(props) {
   const { infoModifyHandle, userInfo, profile_message } = props;
   const { new_password, new_passwordCheck } = userInfo;
+
   const checkPwValidation = new_password === new_passwordCheck;
+
   return (
     <ProfileModifys>
       {INPUT_DATA.map((item, index) => {
@@ -19,14 +21,6 @@ function ProfileModify(props) {
           checkpw,
           samepw,
         } = item;
-        // const validation =
-        //   name === "account"
-        //     ? account
-        //     : name === "email"
-        //     ? email
-        //     : name === "phone"
-        //     ? phone
-        //     : name === "password" && null;
         const validationpw = !new_password ? (
           ""
         ) : checkPwValidation ? (

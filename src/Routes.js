@@ -10,6 +10,7 @@ import UploadPosts from "./Pages/UploadPosts/UploadPosts";
 import Story from "./Pages/Story/Story";
 import MainFeeds from "./Pages/MainFeeds/MainFeeds";
 import UploadArticle from "./Pages/UploadArticle/UploadArticle";
+import Message from "./Pages/Message/Message";
 
 function Routes() {
   return (
@@ -25,6 +26,7 @@ function Routes() {
         <Route exact path="/story" component={Story} />
         <Route exact path="/" component={MainFeeds} />
         <Route exact path="/upload_article" component={UploadArticle} />
+        <Route exact path="/message" component={Message} />
       </Switch>
     </Router>
   );

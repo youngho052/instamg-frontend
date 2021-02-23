@@ -4,6 +4,7 @@ import styled from "styled-components";
 import InputForm from "../../Signup/Components/Input/InputForm";
 import ButtonForm from "../../Signup/Components/Button/ButtonForm";
 import { SIGNIN } from "../../../Config";
+import { Loginitem } from "./Data/LoginInputData";
 
 /**
  *
@@ -51,30 +52,23 @@ function LoginForm(props) {
     })
       .then((res) => res.json())
       .then((result) => {
-        alert("인스타에 오신걸 환영합니다!");
-        localStorage.setItem("token", result.token);
-        history.push("/");
+        const errorMsg = {
+          USER_DOES_NOT_EXIST: "존재하지 않는 계정입니다.",
+          INVALID_PASSWORD: "비밀번호를 잘못 입력 하셨습니다.",
+        };
+
+        if (result.message) {
+          return alert(errorMsg[result.message]);
+        } else {
+          alert("인스타에 오신걸 환영합니다!");
+          localStorage.setItem("token", result.token);
+          history.push("/");
+        }
       });
   };
 
   const { id, password } = loginValue;
   const activateBtn = (id.length && password.length) >= 8;
-
-  // const layoutWrapper = (children) => (
-  //   <div style={{ background: "red" }}>
-  //     <div>
-  //       <div>{children} </div>
-  //     </div>
-  //   </div>
-  // );
-
-  // var items = [
-  //   {
-  //     inputType: "button",
-  //     buttonText: "test",
-  //   },
-  //   { inputType: "text", placeholder: "asjdlfjskladf" },
-  // ];
 
   const inputItem = (type, name, placeholder) => {
     return (
@@ -87,36 +81,10 @@ function LoginForm(props) {
     );
   };
 
-  const loginitem = [
-    {
-      type: "text",
-      name: "id",
-      placeholder: "전화번호, 사용자 이름 또는 이메일",
-    },
-    {
-      type: "password",
-      name: "password",
-      placeholder: "비밀번호를 입력해주세요",
-    },
-  ];
-
   return (
     <>
-      {/* {items.map((item) => {
-        return layoutWrapper(
-          item.inputType == "button" ? (
-            <button>{item.buttonText}</button>
-          ) : (
-            <input placeholder={item.placeholder} />
-          ),
-        );
-      })}
-      {layoutWrapper(item1)}
-
-      {layoutWrapper("<input />")} */}
-
       <LoginForms>
-        {loginitem.map((item) => {
+        {Loginitem.map((item) => {
           return inputItem(item.type, item.name, item.placeholder);
         })}
       </LoginForms>

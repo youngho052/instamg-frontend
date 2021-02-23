@@ -1,8 +1,10 @@
 //Pumpkin
-export const SERVER = "http://172.30.1.41:8000";
+export const SERVER = "http://172.30.1.31:8000";
 export const SIGNUP = `${SERVER}/user/signup`;
 export const SIGNIN = `${SERVER}/user/signin`;
 export const STORY = `${SERVER}/story`;
+export const USER_PROFILE = `${SERVER}/user/profile`;
+export const MESSAGE = `${SERVER}/direct_message`;
 
 // like
 export const LIKE_COMMENT = `${SERVER}/post/comment/like`;

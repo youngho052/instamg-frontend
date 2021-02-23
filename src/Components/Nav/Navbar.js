@@ -16,7 +16,7 @@ function Navbar() {
       },
     })
       .then((res) => res.json())
-      .then((result) => setProfileimg(result.profile.profile_photo));
+      .then((result) => setProfileimg(result.profile?.profile_photo));
   }, []);
 
   return (
@@ -45,7 +45,7 @@ const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 940px;
+  width: 960px;
   height: 54px;
   margin: 0 auto;
 `;
