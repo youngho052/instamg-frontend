@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LoginForm from "./Components/LoginForm";
 import styled from "styled-components";
+import "../../Styles/Common.scss";
 
 function Login(props) {
   return (
@@ -46,7 +47,7 @@ const LoginContainer = styled.div`
 
 const H1 = styled.h1`
   font-size: 45px;
-  font-family: "Lobster";
+  font-family: "Lobster", cursive;
   color: #262626;
   margin: 15px 0;
 `;
