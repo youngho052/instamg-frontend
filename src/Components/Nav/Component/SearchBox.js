@@ -12,7 +12,7 @@ function SearchBox() {
 export default SearchBox;
 
 const SearchBoxs = styled.div`
-  margin-left: 80px;
+  margin-left: 30px;
 
   input {
     width: 215px;

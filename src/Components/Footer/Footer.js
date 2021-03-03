@@ -7,8 +7,8 @@ function Footer() {
     <Footers>
       <FooterContainer>
         <Ul>
-          {FOOTER_DATA.map((item) => {
-            return <Li>{item.content}</Li>;
+          {FOOTER_DATA.map((item, index) => {
+            return <Li key={index}>{item.content}</Li>;
           })}
         </Ul>
         <SelectLanguage>

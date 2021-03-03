@@ -25,7 +25,7 @@ function IconBox(props) {
   };
 
   const history = useHistory();
-  console.log(props);
+
   return (
     <IconBoxs>
       {props.location.pathname === "/main" ? (
@@ -40,8 +40,8 @@ function IconBox(props) {
         <SendIcon onClick={() => history.push({ pathname: "/message" })} />
       )}
 
-      {ICON_DATA.map((item) => {
-        return <i className={item.icon} />;
+      {ICON_DATA.map((item, index) => {
+        return <i className={item.icon} key={index} />;
       })}
       <Dropdown>
         <ProfilePic src={profileimg} onClick={() => setHidden(!hidden)} />
@@ -122,6 +122,7 @@ const HomeFillIcon = styled(HomeFill)`
 
 const SendIcon = styled(Send)`
   width: 25px;
+  border: 100px;
   cursor: pointer;
 `;
 
