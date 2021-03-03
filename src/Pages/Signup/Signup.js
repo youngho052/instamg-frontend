@@ -100,7 +100,7 @@ const LoginContainer = styled.div`
   justify-content: center;
   width: 350px;
   height: 70px;
-  margin: 40px auto;
+  margin: 30px auto;
   border: 1px solid #dbdbdb;
 `;
 

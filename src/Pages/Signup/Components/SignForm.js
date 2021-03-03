@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import InputForm from "./Input/InputForm";
 import ButtonForm from "./Button/ButtonForm";
@@ -11,6 +12,8 @@ function SignForm(props) {
     id: "",
     password: "",
   });
+
+  const history = useHistory();
 
   const handleSignup = (e) => {
     const { name, value } = e.target;
@@ -49,22 +52,20 @@ function SignForm(props) {
           MINIMUM_PASSWORD_LENGTH_IS_8: "비밀번호는 8자 이상이여야 합니다.",
           EMAIL_ALREADY_EXIST: "사용중인 이메일입니다.",
           WRONG_EMAIL_FORMAT: "잘못된 이메일 형식입니다.",
+          SUCCESS: "회원가입 성공!",
         };
 
         if (result.message) return alert(errorMsg[result.message]);
 
-        if (result.message === "SUCCESS") {
-          alert("회원가입 성공!");
-          this.props.history.push("./login");
-          return;
+        if (result.message) {
+          alert(errorMsg[result.message]);
+          history.push("/login");
         }
       });
   };
 
   const { phone, email, id, password } = signupValue;
-  const activateBtn = (id.length && password.length) !== 0;
-  console.log({ phone, email, id, password });
-  console.log("SignForm test:", activateBtn);
+  const activateBtn = (id.length && password.length) >= 8;
 
   return (
     <>
@@ -87,14 +88,14 @@ function SignForm(props) {
           type="text"
           name="id"
           value={id}
-          placeholder="사용자ID*"
+          placeholder="사용자ID *"
           onChange={handleSignup}
         />
         <InputForm
           type="password"
           name="password"
           value={password}
-          placeholder="비밀번호*"
+          placeholder="비밀번호 *"
           onChange={handleSignup}
         />
       </SignupForms>
