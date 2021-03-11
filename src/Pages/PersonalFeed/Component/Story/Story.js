@@ -5,12 +5,12 @@ import { FEED_STORY } from "../../../../Config";
 
 export default function Story(props) {
   const [storiesData, setStoriesData] = useState();
-  const { feedPic, account } = props;
+  const { feedPic, account, userId } = props;
 
   useEffect(() => {
     // fetch("/data/personalFeed/story.json")
-    // fetch(`${FEED_STORY}/${props.match.params.id}`)
-    fetch(`${FEED_STORY}/5`)
+    fetch(`${FEED_STORY}/${props.match.params.id}`)
+      // fetch(`${FEED_STORY}/5`)
       .then((res) => res.json())
       .then((res) => setStoriesData(res.profile_story));
   }, []);
@@ -24,6 +24,7 @@ export default function Story(props) {
           storiesData={storiesData}
           feedPic={feedPic}
           account={account}
+          userId={userId}
         />
       </StoryWrapper>
     </SlideControlDiv>

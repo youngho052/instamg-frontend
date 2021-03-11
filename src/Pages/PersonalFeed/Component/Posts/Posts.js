@@ -21,8 +21,8 @@ export default function Posts(props) {
   const fetchInstaPosts = async () => {
     await axios
       // .get("/data/personalFeed/post.json")
-      // .get(`${FEED_THUMBNAILS}/${props.match.params.id}?page=${offset}`)
-      .get(`${FEED_THUMBNAILS}/${5}?page=${offset}`)
+      .get(`${FEED_THUMBNAILS}/${props.match.params.id}?page=${offset}`)
+      // .get(`${FEED_THUMBNAILS}/${5}?page=${offset}`)
       .then((response) => {
         if (response.data.post_list.length === 0) {
           setLoadingShow(false);

@@ -7,7 +7,7 @@ import EachStory from "./EachStory";
 import { SERVER } from "../../../../Config";
 
 export default function EachStoryMap(props) {
-  const { storiesData, feedPic, account } = props;
+  const { storiesData, feedPic, account, userId } = props;
 
   const settings = {
     dots: false,
@@ -27,7 +27,7 @@ export default function EachStoryMap(props) {
               thumbnailPic={SERVER + "/" + story.thumbnail_path}
               // thumbnailPic={story.thumbnail_path}
               title={story.title}
-              id={story.story_id}
+              id={userId}
               feedPic={feedPic}
               account={account}
             />
