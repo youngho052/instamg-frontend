@@ -5,14 +5,15 @@ import Story from "./Component/Story/Story";
 import Posts from "./Component/Posts/Posts";
 import Navbar from "../../Components/Nav/Navbar";
 import { FEED_PROFILE } from "../../Config";
+import Footer from "../../Components/Footer/Footer";
 
-export default function PersonalFeed() {
+export default function PersonalFeed(props) {
   const [userAllData, setUserAllData] = useState();
 
   useEffect(() => {
     // fetch("/data/personalFeed/profile.json")
-    // fetch(`${FEED_PROFILE}/${props.match.params.id}`,{
-    fetch(`${FEED_PROFILE}/5`, {
+    fetch(`${FEED_PROFILE}/${props.match.params.id}`, {
+      // fetch(`${FEED_PROFILE}/5`, {
       headers: {
         Authorization: localStorage.getItem("token"),
       },
@@ -29,9 +30,11 @@ export default function PersonalFeed() {
         <Story
           feedPic={userAllData?.profile_photo}
           account={userAllData?.account}
+          userId={userAllData?.id}
         />
         <Posts userAllData={userAllData} />
       </Main>
+      <Footer />
     </PersonalFeedWrapper>
   );
 }
