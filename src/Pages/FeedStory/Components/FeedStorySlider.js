@@ -8,9 +8,10 @@ import { Stop } from "@styled-icons/bootstrap/Stop";
 import { ThreeDots } from "@styled-icons/bootstrap/ThreeDots";
 import { PlayFill } from "@styled-icons/bootstrap/PlayFill";
 import { TimeFormat } from "../../../Components/TimeData/TimeData";
+import { SERVER } from "../../../Config";
 
 function FeedStorySlider(props) {
-  const { feedImages, SERVER } = props;
+  const { feedImages } = props;
   const [videoControll, setVideoControll] = useState(false);
 
   const picWrapStyles = {
