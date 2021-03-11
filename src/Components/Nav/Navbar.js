@@ -23,7 +23,7 @@ function Navbar() {
     <Navbars>
       <NavbarContainer>
         <LogoName>
-          <Link to="/main">instamg</Link>
+          <Link to="/">instamg</Link>
         </LogoName>
         <SearchBox />
         <IconBox profileimg={profileimg} />

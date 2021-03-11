@@ -8,6 +8,8 @@ import Navbar from "./Components/Nav/Navbar";
 import PersonalFeed from "./Pages/PersonalFeed/PersonalFeed";
 import UploadPosts from "./Pages/UploadPosts/UploadPosts";
 import Story from "./Pages/Story/Story";
+import MainFeeds from "./Pages/MainFeeds/MainFeeds";
+import UploadArticle from "./Pages/UploadArticle/UploadArticle";
 
 function Routes() {
   return (
@@ -21,6 +23,8 @@ function Routes() {
         <Route exact path="/personalFeed/:id" component={PersonalFeed} />
         <Route exact path="/uploadPosts" component={UploadPosts} />
         <Route exact path="/story" component={Story} />
+        <Route exact path="/" component={MainFeeds} />
+        <Route exact path="/upload_article" component={UploadArticle} />
       </Switch>
     </Router>
   );

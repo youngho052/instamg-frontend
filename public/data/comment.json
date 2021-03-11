@@ -1,0 +1,36 @@
+{
+  "comment": [
+    {
+      "post_id": 1,
+      "comment_id": 1,
+      "content": "comment test!!!",
+      "comment_user_id": 2,
+      "comment_user_account": "test2",
+      "comment_user_profile_photo": null,
+      "created_at": "2021-02-20T00:00:00Z",
+      "is_liked": false,
+      "recomment": [
+        {
+          "recomment_id": 3,
+          "content": "recomment test2!!!",
+          "recomment_user_id": 1,
+          "recomment_user_account": "test",
+          "recomment_user_profile_photo": null,
+          "created_at": "2021-02-22T00:00:00Z",
+          "is_liked": false
+        }
+      ]
+    },
+    {
+      "post_id": 1,
+      "comment_id": 2,
+      "content": "comment test2!!!",
+      "comment_user_id": 42,
+      "comment_user_account": "Edward",
+      "comment_user_profile_photo": null,
+      "created_at": "2021-02-22T00:00:00Z",
+      "is_liked": true,
+      "recomment": []
+    }
+  ]
+}

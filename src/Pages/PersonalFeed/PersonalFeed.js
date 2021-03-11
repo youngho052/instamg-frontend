@@ -31,8 +31,9 @@ export default function PersonalFeed(props) {
           feedPic={userAllData?.profile_photo}
           account={userAllData?.account}
           userId={userAllData?.id}
+          urlId={props.match.params.id}
         />
-        <Posts userAllData={userAllData} />
+        <Posts userAllData={userAllData} tmpId={props.match.params.id} />
       </Main>
       <Footer />
     </PersonalFeedWrapper>

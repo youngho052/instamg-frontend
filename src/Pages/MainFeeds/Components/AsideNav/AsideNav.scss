@@ -1,0 +1,44 @@
+.aside-nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+
+    li {
+      line-height: 13px;
+      text-decoration: none;
+      color: #c7c7c7;
+      font-size: 11px;
+
+      a {
+        text-decoration: none;
+        color: #c7c7c7;
+        font-size: 11px;
+      }
+      &:not(:last-child)::after {
+        content: "\00B7";
+        margin: 0 0.25em;
+      }
+    }
+  }
+
+  .aside-nav-copyright {
+    color: #c7c7c7;
+    font-size: 11px;
+  }
+
+  .choose-langauge {
+    cursor: pointer;
+  }
+
+  .select {
+    position: absolute;
+    right: -70px;
+    top: 26px;
+    width: 100px;
+  }
+}

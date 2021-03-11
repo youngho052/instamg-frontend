@@ -1,0 +1,52 @@
+{
+  "stories": [
+    [
+      {
+        "story_id": 4,
+        "user_id": 1,
+        "user_account": "test",
+        "profile_photo": null,
+        "created_at": "2021-02-23T02:53:33.764Z"
+      }
+    ],
+    [
+      {
+        "story_id": 2,
+        "user_id": 42,
+        "user_account": "Edward",
+        "profile_photo": null,
+        "created_at": "2021-02-22T02:53:33.764Z"
+      },
+      {
+        "story_id": 3,
+        "user_id": 42,
+        "user_account": "Edward",
+        "profile_photo": null,
+        "created_at": "2021-02-24T02:53:33.764Z"
+      }
+    ],
+    [
+      {
+        "story_id": 2,
+        "user_id": 44,
+        "user_account": "쥴리",
+        "profile_photo": null,
+        "created_at": "2021-02-22T02:53:33.764Z"
+      },
+      {
+        "story_id": 3,
+        "user_id": 44,
+        "user_account": "쥴리",
+        "profile_photo": null,
+        "created_at": "2021-03-01T02:53:33.764Z"
+      }
+    ],
+    [
+      {
+        "user_id": 2,
+        "user_account": "test2",
+        "profile_photo": null
+      }
+    ]
+  ]
+}

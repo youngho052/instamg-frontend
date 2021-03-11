@@ -5,11 +5,15 @@ import { FEED_STORY } from "../../../../Config";
 
 export default function Story(props) {
   const [storiesData, setStoriesData] = useState();
-  const { feedPic, account, userId } = props;
+  const { feedPic, account, userId, urlId } = props;
 
   useEffect(() => {
     // fetch("/data/personalFeed/story.json")
-    fetch(`${FEED_STORY}/${props.match.params.id}`)
+    fetch(`${FEED_STORY}/${urlId}`, {
+      headers: {
+        Authorization: localStorage.getItem("token"),
+      },
+    })
       // fetch(`${FEED_STORY}/5`)
       .then((res) => res.json())
       .then((res) => setStoriesData(res.profile_story));
