@@ -28,10 +28,10 @@ function IconBox(props) {
 
   return (
     <IconBoxs>
-      {props.location.pathname === "/main" ? (
+      {props.location.pathname === "/" ? (
         <HomeFillIcon />
       ) : (
-        <HomeIcon onClick={() => history.push({ pathname: "/main" })} />
+        <HomeIcon onClick={() => history.push({ pathname: "/" })} />
       )}
 
       {props.location.pathname === "/message" ? (
@@ -98,7 +98,9 @@ const DropdownMenus = styled(DropdownMenu)`
 `;
 
 const DropdownItems = styled(DropdownItem)`
-  margin-top: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
 
   .icon {
     margin-left: -10px;
@@ -111,22 +113,24 @@ const DropdownItems = styled(DropdownItem)`
 
 const HomeIcon = styled(Home)`
   width: 23px;
-  margin-right: 10px;
+  margin-right: 12px;
   cursor: pointer;
 `;
 
 const HomeFillIcon = styled(HomeFill)`
   width: 23px;
+  margin-right: 12px;
   cursor: pointer;
 `;
 
 const SendIcon = styled(Send)`
   width: 25px;
-  border: 100px;
+  margin-right: 5px;
   cursor: pointer;
 `;
 
 const SendPlaneIcon = styled(SendPlane)`
   width: 25px;
+  margin-right: 5px;
   cursor: pointer;
 `;

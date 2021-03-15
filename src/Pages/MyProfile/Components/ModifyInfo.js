@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { MODIFY_DATA } from "../Components/Data/ModifyData";
 
-function ModifyInfo(props) {
+function ModifyInfo() {
   return (
     <ModifyInfos>
       {MODIFY_DATA.map((item, index) => {

@@ -6,6 +6,7 @@ import UpdatedStories from "./Components/UpdatedStories/UpdatedStroies";
 import MainFeedsProfile from "./Components/MainFeedsProfile/MainFeedsProfile";
 import Suggested from "./Components/Suggested/Suggested";
 import AsideNav from "./Components/AsideNav/AsideNav";
+import NavBar from "../../Components/Nav/Navbar";
 import { MAIN_FEEDS, MAIN_STORIES } from "../../Config";
 
 function MainFeeds() {
@@ -60,33 +61,36 @@ function MainFeeds() {
   }, []);
 
   return (
-    <MainFeedsSection>
-      <div className="content">
-        <section>
-          <UpdatedStories stories={stories} />
-          {feed &&
-            feed
-              .sort((a, b) =>
-                a.created_at < b.created_at
-                  ? 1
-                  : a.created_at > b.created_at
-                  ? -1
-                  : 0,
-              )
-              .map((article, idx) => (
-                <Article key={idx} userInfo={userInfo} article={article} />
-              ))}
-          <div className="loading" ref={pageEnd}>
-            {loading ? <CircularProgress /> : null}
-          </div>
-        </section>
-        <aside>
-          <MainFeedsProfile userInfo={userInfo} />
-          <Suggested />
-          <AsideNav />
-        </aside>
-      </div>
-    </MainFeedsSection>
+    <>
+      <NavBar />
+      <MainFeedsSection>
+        <div className="content">
+          <section>
+            <UpdatedStories stories={stories} />
+            {feed &&
+              feed
+                .sort((a, b) =>
+                  a.created_at < b.created_at
+                    ? 1
+                    : a.created_at > b.created_at
+                    ? -1
+                    : 0,
+                )
+                .map((article, idx) => (
+                  <Article key={idx} userInfo={userInfo} article={article} />
+                ))}
+            <div className="loading" ref={pageEnd}>
+              {loading ? <CircularProgress /> : null}
+            </div>
+          </section>
+          <aside>
+            <MainFeedsProfile userInfo={userInfo} />
+            <Suggested />
+            <AsideNav />
+          </aside>
+        </div>
+      </MainFeedsSection>
+    </>
   );
 }
 

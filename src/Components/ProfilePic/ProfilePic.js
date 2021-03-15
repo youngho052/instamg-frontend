@@ -14,7 +14,11 @@ export default function ProfilePic(props) {
         src="https://unilink.us/content/border/preview/1.png"
         hasTodayLive={hasTodayLive}
       />
-      <ProfileImg src={src === null ? basicPicture : SERVER + "/" + src} />
+      <ProfileImg
+        src={
+          src === null || src === undefined ? basicPicture : SERVER + "/" + src
+        }
+      />
       {/* <ProfileImg src={src === null ? basicPicture : src} /> */}
     </ProfilePicWrapper>
   );
