@@ -43,7 +43,8 @@ instagram을 모티브로 하여 구현한 팀 프로젝트
 ### 3. 메인 피드 업로드 페이지
 
 ### 4. 개인 유저 피드 페이지
-- 무한 스크롤 구현 (intersectionObserver, useRef, async & await, setTimeout 활용)
+- 무한 스크롤 구현 (
+, useRef, async & await, setTimeout 활용)
 - slick slider을 활용한 슬라이드 구현 
 - 동적 라우팅 구현 (메인 피드→ 개인 피드, 개인 피드→ 스토리, DM, 게시물 등록)
 - axios, fetch를 활용한 통신
@@ -79,6 +80,7 @@ instagram을 모티브로 하여 구현한 팀 프로젝트
 ### 10. DM 페이지
 -  WebSocket Api를 이용한 실시간으로 다른 상대와 대화기능 구현
 -  Modal을 이용한 DM상대방 추가 기능 구현
+-  
 
 ## Project Result
 [![video](https://i.ytimg.com/an_webp/HZbOxALEh_c/mqdefault_6s.webp?du=3000&sqp=CP3c4IIG&rs=AOn4CLDD69LkCfxmmtYVY_cf_1TuB4jbbg)](https://www.youtube.com/watch?v=HZbOxALEh_c)
