@@ -1,16 +1,16 @@
 # Instamg Team Project
 
-## Introduction
+## 1️⃣ Introduction
 instagram을 모티브로 하여 구현한 팀 프로젝트
 
-## Period
+## 2️⃣ Period
 '21. 2. 15 ~ 3. 11
 
-## Members
+## 3️⃣ Members
 * Frontend : `PM` 정선미, 김희진, 박영호
 * Backend: 윤정민, 홍연우
 
-## Front Techs
+## 4️⃣ Front Techs
 * React
 * React Hooks
 * React-router-dom
@@ -24,13 +24,13 @@ instagram을 모티브로 하여 구현한 팀 프로젝트
 * styled-dropdown-component
 * WebSocket Api
 
-## Communication Tools
+## 5️⃣ Communication Tools
 - Slack
 - Trello
 - Git + GitHub
 - [Notion](https://www.notion.so/Able-Stor-c8a49debe8974524988f4601c2ec069b)
 
-## 구현 기능
+## 6️⃣ Functions
 
 ### 1. 로그인/회원가입/로그아웃 페이지
 - Validation을 이용한 회원가입 로그인 페이지 구현 및 로그아웃 구현
@@ -81,4 +81,4 @@ instagram을 모티브로 하여 구현한 팀 프로젝트
 
 ## Project Result
 [![video](https://i.ytimg.com/an_webp/HZbOxALEh_c/mqdefault_6s.webp?du=3000&sqp=CP3c4IIG&rs=AOn4CLDD69LkCfxmmtYVY_cf_1TuB4jbbg)](https://www.youtube.com/watch?v=HZbOxALEh_c)
-
+<video width="100%" src= "https://i.ytimg.com/an_webp/HZbOxALEh_c/mqdefault_6s.webp?du=3000&sqp=CP3c4IIG&rs=AOn4CLDD69LkCfxmmtYVY_cf_1TuB4jbbg" />
