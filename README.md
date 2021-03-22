@@ -36,6 +36,7 @@ instagram을 모티브로 하여 구현한 팀 프로젝트
 ### 1. 로그인/회원가입/로그아웃 페이지
 - Validation을 이용한 회원가입 로그인 페이지 구현 및 로그아웃 구현
 - JWT 와 LocalStorage를 사용하여 로그인 페이지 구현
+- styled-dropdown-component를 이용하여 프로필 로그아웃 라우팅 기능 구현
 - LocalStorage removeItem을 사용하여 로그아웃 기능 구현
 
 ### 2. 메인 피드 페이지
@@ -76,17 +77,21 @@ instagram을 모티브로 하여 구현한 팀 프로젝트
 - 사진 및 동영상 없으면 게시물 등록 버튼 사용 불가 조건
 
 ### 7. 메인 피드 스토리 페이지
-- React-Swiper library 와 JavaScript를 사용하여 각 이미지의 Index를 이용하여 동적인 이미지 슬라이드 구현하여 2중 슬라이드 기능 구현
+- React-Swiper library을 사용해 Slider 구현
+- JavaScript를 사용하여 각 이미지의 Index를 이용하여 동적인 이미지 슬라이드를 구현하여 2중 Slider 구현
 - 들어오는 데이터에따라 이미지 또는 동영상을 보여줄 수 있도록 구현
 
 ### 8. 개인 피드 스토리 페이지
 - 하나의 이미지 및 동영상을 보여주며 React-Swiper를 이용한 슬라이드 구현
 
 ### 9. 프로필 수정 페이지
-- 프로필의 이미지 및 유저 정보 등을 Form data를 통해 변경이 가능하게 구현
+- FormData를 사용해 프로필 이미지를 업로드하여 원하는 이미지로 변화 기능 구현
+- 
 
 ### 10. DM 페이지
 -  WebSocket Api를 이용한 실시간으로 다른 상대와 대화기능 구현
+-  WebSocket onOpen, onSend 메서드를 사용해 WebSocekt 주소에 룸 생성 및 메세지 전송
+-  WebSocket onMessage 메서드를 사용해 상대방이 보낸 메세지 받기
 -  Modal을 이용한 DM상대방 추가 기능 구현
 
 ## Project Result
