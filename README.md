@@ -29,7 +29,7 @@ instagram을 모티브로 하여 구현한 팀 프로젝트
 - Slack
 - Trello
 - Git + GitHub
-- [Notion](https://www.notion.so/Able-Stor-c8a49debe8974524988f4601c2ec069b)
+- [Notion](https://www.notion.so/Able-Stor-c8a49debe8974524988f4601c2ec069b) (Agile 방식의 Daily StandUp Meeting)
 
 ## 6️⃣ Functions
 
