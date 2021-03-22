@@ -1,29 +1,30 @@
-#  &nbsp; Instamg Team Project
+# Instamg Team Project
 
-## Project
+## Introduction
+instagram을 모티브로 하여 구현한 팀 프로젝트
 
-&nbsp;&nbsp; 인스타그램 Motive Project <br/>
+## Period
+'21. 2. 15 ~ 3. 11
 
-## Instamg Team Member
-* Frontend : 김희진, 박영호, `PM` 정선미
+## Members
+* Frontend : `PM` 정선미, 김희진, 박영호
 * Backend: 윤정민, 홍연우
 
-## Technologies 
-
-* HTML5 , CSS3
-* Javascript 
-* Git
+## Front Techs
 * React
 * React Hooks
 * React-router-dom
-* Styled-Components
-* WebSocket Api
 * React-slick-slider 
 * React-Swiper
 * React-fontAwesome
+* HTML5 , CSS3
+* Javascript (ES6) 
+* Git
+* Styled-Components
 * styled-dropdown-component
+* WebSocket Api
 
-## Dev Tool
+## Communication Tools
 - Slack
 - Trello
 - Git + GitHub
@@ -79,5 +80,5 @@
 -  Modal을 이용한 DM상대방 추가 기능 구현
 
 ## Project Result
-<!-- [![video](https://i.ytimg.com/an_webp/HZbOxALEh_c/mqdefault_6s.webp?du=3000&sqp=CP3c4IIG&rs=AOn4CLDD69LkCfxmmtYVY_cf_1TuB4jbbg)](https://www.youtube.com/watch?v=HZbOxALEh_c) -->
-[<img width="1500px" src= "https://i.ytimg.com/an_webp/HZbOxALEh_c/mqdefault_6s.webp?du=3000&sqp=CP3c4IIG&rs=AOn4CLDD69LkCfxmmtYVY_cf_1TuB4jbbg" />](https://www.youtube.com/watch?v=HZbOxALEh_c)
+[![video](https://i.ytimg.com/an_webp/HZbOxALEh_c/mqdefault_6s.webp?du=3000&sqp=CP3c4IIG&rs=AOn4CLDD69LkCfxmmtYVY_cf_1TuB4jbbg)](https://www.youtube.com/watch?v=HZbOxALEh_c)
+<video width="1500px" src= "https://i.ytimg.com/an_webp/HZbOxALEh_c/mqdefault_6s.webp?du=3000&sqp=CP3c4IIG&rs=AOn4CLDD69LkCfxmmtYVY_cf_1TuB4jbbg" />
