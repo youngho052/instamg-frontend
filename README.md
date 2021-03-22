@@ -3,7 +3,7 @@
 ## Project
 
 &nbsp;&nbsp; 인스타그램 Motive Project <br/>
-<img width= "100%" src="http://img.khan.co.kr/news/2021/03/17/2021031701001975400169661.jpg" />
+<!-- <img width= "100%" src="http://img.khan.co.kr/news/2021/03/17/2021031701001975400169661.jpg" /> -->
 
 ## Instamg Team Member
 * Frontend : 김희진, 박영호, `PM` 정선미
