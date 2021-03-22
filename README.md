@@ -35,12 +35,20 @@ instagram을 모티브로 하여 구현한 팀 프로젝트
 
 ### 1. 로그인/회원가입/로그아웃 페이지
 - Validation을 이용한 회원가입 로그인 페이지 구현 및 로그아웃 구현
--  JWT 와 LocalStorage를 사용하여 로그인 페이지 구현
+- JWT 와 LocalStorage를 사용하여 로그인 페이지 구현
 - LocalStorage removeItem을 사용하여 로그아웃 기능 구현
 
 ### 2. 메인 피드 페이지
+- Intersection Observer API를 이용해서 인피니트 스크롤 페이지네이션 구현
+- Material UI 라이브러리 및 useRef Hooks 사용으로 모달 프리뷰 기능 구현
+- React Player 라이브러리를 사용해서 동영상 재생 기능 구현
+- Swiper 라이브러리를 사용해서 슬라이더 기능 구현
+- 게시물 좋아요, 유저 팔로우 및 댓글 읽기, 등록, 수정, 삭제 기능 구현
+- 모달 컴포넌트 생성 및 props 에 따라 모달 값 변화 기능 구현
 
 ### 3. 메인 피드 업로드 페이지
+- Form Data 형식으로 파일 업로드 및 게시물 생성, 삭제 기능 구현
+- FileReader 객체로 업로드된 이미지 파일 미리보기 구현
 
 ### 4. 개인 유저 피드 페이지
 - 무한 스크롤 구현 (
