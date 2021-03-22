@@ -41,11 +41,14 @@
 ### 3. 메인 피드 업로드 페이지
 
 ### 4. 개인 유저 피드 페이지
-- 무한 스크롤 구현
-    - intersectionObserver, useRef, async & await, setTimeout 사용
-- 슬라이드 구현 (slick slider 활용) - 스토리 부분
+- 무한 스크롤 구현 (intersectionObserver, useRef, async & await, setTimeout 활용)
+- slick slider을 활용한 슬라이드 구현 
 - 동적 라우팅 구현 (메인 피드→ 개인 피드, 개인 피드→ 스토리, DM, 게시물 등록)
 - axios, fetch를 활용한 통신
+- 컴포넌트 재사용 (일부 아토믹 디자인 접목)
+  - 프로필 사진 (팀 공동사용, param으로 사용법 설명)
+  - 숫자 단위 계산 메소드 (3~13자리 수까지 영문 단위로 반환)
+  - icons 및 버튼
 
 ### 5. 개인 유저 피드 모달창
 
