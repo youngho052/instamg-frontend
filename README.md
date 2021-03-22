@@ -1,4 +1,4 @@
-# Instamg Team Project
+# [image](http://img.khan.co.kr/news/2021/03/17/2021031701001975400169661.jpg) <br/>Instamg Team Project
 
 ## 1️⃣ Introduction
 instagram을 모티브로 하여 구현한 팀 프로젝트
