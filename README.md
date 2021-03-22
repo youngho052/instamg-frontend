@@ -27,7 +27,7 @@
 - Slack
 - Trello
 - Git + GitHub
-- Notion
+- [Notion](https://www.notion.so/Able-Stor-c8a49debe8974524988f4601c2ec069b)
 
 ## 구현 기능
 
